@@ -27,6 +27,7 @@ namespace ClassLibrary1
             modelBuilder.Configurations.Add(new EmployeFluent());
             modelBuilder.Configurations.Add(new FormationFluent());
             modelBuilder.Configurations.Add(new ExperienceFluent());
+
         }
 
         public DbSet<Offre> Offres { get; set; }
