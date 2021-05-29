@@ -16,6 +16,8 @@ namespace ConsoleApp1
             try
             {
                 Manager manager = Manager.Instance;
+                List<Employe> liste = manager.GetAllEmploye();
+                Console.WriteLine(liste);
                 //ContextDB contexte = new ContextDB();
                 //List<Offre> offres = contexte.Offres.ToList();
                 //Console.WriteLine("Hello");
