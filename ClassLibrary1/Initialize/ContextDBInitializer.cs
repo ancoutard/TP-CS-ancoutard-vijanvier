@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary1.Initialize
 {
-    public class ContextDBInitializer : DropCreateDatabaseAlways<ContextDB>
+    public class ContextDBInitializer : CreateDatabaseIfNotExists<ContextDB>
     {
     }
 }

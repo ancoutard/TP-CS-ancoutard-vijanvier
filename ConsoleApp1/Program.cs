@@ -21,6 +21,10 @@ namespace ConsoleApp1
                 //ContextDB contexte = new ContextDB();
                 //List<Offre> offres = contexte.Offres.ToList();
                 //Console.WriteLine("Hello");
+                manager.AddEmploye(new Employe {Nom = "Janv", Prenom = "Victor", Anciennete = 2, Biographie = "Pas tres grand", DateNaissance = new DateTime(2000, 9, 11) });
+                manager.AddEmploye(new Employe {Nom = "Cout", Prenom = "Antoine", Anciennete = 1, Biographie = "Pas pas tres grand", DateNaissance = new DateTime(2000, 12, 6) });
+                manager.AddEmploye(new Employe {Nom = "Arno", Prenom = "Tristan", Anciennete = 7, Biographie = "Vraiment pas tres grand", DateNaissance = new DateTime(2000, 10, 9) });
+
             }
             catch (Exception e)
             {
