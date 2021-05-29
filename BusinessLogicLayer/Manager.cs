@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using ClassLibrary1;
 using ClassLibrary1.Entities;
 using BusinessLogicLayer.Queries;
+using BusinessLogicLayer.Commands;
 
 namespace BusinessLogicLayer
 {
@@ -35,6 +36,30 @@ namespace BusinessLogicLayer
         {
             EmployeQuery eq = new EmployeQuery(_context);
             return eq.GetAll().ToList();
+        }
+
+        public Employe GetByIdEmploye(int id)
+        {
+            EmployeQuery eq = new EmployeQuery(_context);
+            return eq.GetByID(id).FirstOrDefault();
+        }
+
+        public int AddEmploye(Employe e)
+        {
+            EmployeCommand ec = new EmployeCommand(_context);
+            return ec.Ajouter(e);
+        }
+
+        public void EditEmploye(Employe e)
+        {
+            EmployeCommand ec = new EmployeCommand(_context);
+            ec.Modifier(e);
+        }
+
+        public void DeleteEmploye(int id)
+        {
+            EmployeCommand ec = new EmployeCommand(_context);
+            ec.Supprimer(id);
         }
 
         public List<Experience> GetAllExperience()
