@@ -51,6 +51,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\EmployeCommand.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\FormationQuery.cs" />
@@ -60,9 +61,7 @@
     <Compile Include="Queries\PostulationQuery.cs" />
     <Compile Include="Queries\StatutQuery.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Commands\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
       <Project>{2661e565-9a8e-4302-85aa-07915b405cd1}</Project>

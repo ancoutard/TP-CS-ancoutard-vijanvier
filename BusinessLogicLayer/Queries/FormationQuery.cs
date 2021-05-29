@@ -41,7 +41,7 @@ namespace BusinessLogicLayer.Queries
         /// <returns>IQueryable de Formation</returns>
         public IQueryable<Formation> GetByID(int id)
         {
-            return _contexte.Formations.Where(p => p.Id == id);
+            return _contexte.Formations.Where(f => f.Id == id);
         }
     }
 }

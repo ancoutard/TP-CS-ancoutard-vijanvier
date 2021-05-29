@@ -41,7 +41,7 @@ namespace BusinessLogicLayer.Queries
         /// <returns>IQueryable de Statut</returns>
         public IQueryable<Statut> GetByID(int id)
         {
-            return _contexte.Statuts.Where(p => p.Id == id);
+            return _contexte.Statuts.Where(s => s.Id == id);
         }
     }
 }

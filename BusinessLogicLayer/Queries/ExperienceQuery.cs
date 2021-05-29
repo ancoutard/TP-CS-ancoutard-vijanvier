@@ -41,7 +41,7 @@ namespace BusinessLogicLayer.Queries
         /// <returns>IQueryable de Experience</returns>
         public IQueryable<Experience> GetByID(int id)
         {
-            return _contexte.Experiences.Where(p => p.Id == id);
+            return _contexte.Experiences.Where(e => e.Id == id);
         }
     }
 }

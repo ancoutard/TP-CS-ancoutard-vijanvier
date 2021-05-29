@@ -41,7 +41,7 @@ namespace BusinessLogicLayer.Queries
         /// <returns>IQueryable de Offre</returns>
         public IQueryable<Offre> GetByID(int id)
         {
-            return _contexte.Offres.Where(p => p.Id == id);
+            return _contexte.Offres.Where(o => o.Id == id);
         }
     }
 }
