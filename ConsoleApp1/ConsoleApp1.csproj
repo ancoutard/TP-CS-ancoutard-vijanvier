@@ -62,6 +62,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{9165c258-719d-4d63-869e-9ae7aceaf2b2}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ClassLibrary1\ClassLibrary1.csproj">
       <Project>{2661e565-9a8e-4302-85aa-07915b405cd1}</Project>
       <Name>ClassLibrary1</Name>

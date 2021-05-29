@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLogicLayer;
 
 namespace ConsoleApp1
 {
@@ -14,9 +15,10 @@ namespace ConsoleApp1
         {
             try
             {
-                ContextDB contexte = new ContextDB();
-                List<Offre> offres = contexte.Offres.ToList();
-                Console.WriteLine("Hello");
+                Manager manager = Manager.Instance;
+                //ContextDB contexte = new ContextDB();
+                //List<Offre> offres = contexte.Offres.ToList();
+                //Console.WriteLine("Hello");
             }
             catch (Exception e)
             {
