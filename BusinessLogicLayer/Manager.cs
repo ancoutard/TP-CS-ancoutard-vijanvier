@@ -80,15 +80,72 @@ namespace BusinessLogicLayer
             return oq.GetAll().ToList();
         }
 
+        public int AddOffre(Offre o)
+        {
+            OffreCommand off = new OffreCommand(_context);
+            return off.Ajouter(o);
+        }
+
+        public void EditOffre(Offre o)
+        {
+            OffreCommand off = new OffreCommand(_context);
+            off.Modifier(o);
+        }
+
+        public void DeleteOffre(int id)
+        {
+            OffreCommand off = new OffreCommand(_context);
+            off.Supprimer(id);
+        }
+
         public List<Postulation> GetAllPostulation()
         {
             PostulationQuery pq = new PostulationQuery(_context);
             return pq.GetAll().ToList();
         }
+
+        public int AddPostulation(Postulation p)
+        {
+            PostulationCommand post = new PostulationCommand(_context);
+            return post.Ajouter(p);
+        }
+
+        public void EditPostulation(Postulation p)
+        {
+            PostulationCommand post = new PostulationCommand(_context);
+            post.Modifier(p);
+        }
+
+        public void DeletePostulation(int idOffre, int idEmploye)
+        {
+            PostulationCommand post = new PostulationCommand(_context);
+            post.Supprimer(idOffre, idEmploye);
+        }
+
         public List<Statut> GetAllStatut()
         {
             StatutQuery sq = new StatutQuery(_context);
             return sq.GetAll().ToList();
         }
+
+        public int AddStatut(Statut s)
+        {
+            StatutCommand stat = new StatutCommand(_context);
+            return stat.Ajouter(s);
+        }
+
+        public void EditStatut(Statut s)
+        {
+            StatutCommand stat = new StatutCommand(_context);
+            stat.Modifier(s);
+        }
+
+        public void DeleteStatut(int id)
+        {
+            StatutCommand stat = new StatutCommand(_context);
+            stat.Supprimer(id);
+        }
+
+
     }
 }

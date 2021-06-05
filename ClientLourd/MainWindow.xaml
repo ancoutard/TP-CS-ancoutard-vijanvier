@@ -18,7 +18,9 @@
         <DockPanel Background="Blue">
             <Label VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" FontSize="26" Foreground="White">Mon Application</Label>
         </DockPanel>
-        <my:ListeEmploye Grid.Row="1" DataContext="{Binding ListeEmployeViewModel}"></my:ListeEmploye>
+        <!--<my:ListeEmploye Grid.Row="1" DataContext="{Binding ListeEmployeViewModel}"></my:ListeEmploye>-->
+        
+        <my:ListeOffre Grid.Row="1" DataContext="{Binding ListeOffreViewModel}"></my:ListeOffre>
 
     </Grid>
 </Window>

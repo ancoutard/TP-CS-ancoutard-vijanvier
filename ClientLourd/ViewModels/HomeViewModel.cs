@@ -12,6 +12,8 @@ namespace ClientLourd.ViewModels
         #region Variables
 
         private ListeEmployeViewModel _listeEmployeViewModel = null;
+        private ListeOffreViewModel _listeOffreViewModel = null;
+        private ListePostulationViewModel _listePostulationViewModel = null;
 
         #endregion
 
@@ -23,6 +25,8 @@ namespace ClientLourd.ViewModels
         public HomeViewModel()
         {
             _listeEmployeViewModel = new ListeEmployeViewModel();
+            _listeOffreViewModel = new ListeOffreViewModel();
+            _listePostulationViewModel = new ListePostulationViewModel();
         }
 
         #endregion
@@ -36,6 +40,17 @@ namespace ClientLourd.ViewModels
         {
             get { return _listeEmployeViewModel; }
             set { _listeEmployeViewModel = value; }
+        }
+
+        public ListeOffreViewModel ListeOffreViewModel
+        {
+            get { return _listeOffreViewModel; }
+            set { _listeOffreViewModel = value; }
+        }
+        public ListePostulationViewModel ListePostulationViewModel
+        {
+            get { return _listePostulationViewModel; }
+            set { _listePostulationViewModel = value; }
         }
 
         #endregion

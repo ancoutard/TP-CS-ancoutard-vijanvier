@@ -31,7 +31,7 @@ namespace BusinessLogicLayer.Queries
         /// <returns>IQueryable de Offre</returns>
         public IQueryable<Offre> GetAll()
         {
-            return _contexte.Offres;
+            return _contexte.Offres.Include("Statut");
         }
 
         /// <summary>
