@@ -79,6 +79,12 @@ namespace BusinessLogicLayer
             OffreQuery oq = new OffreQuery(_context);
             return oq.GetAll().ToList();
         }
+        public Offre GetByIdOffre(int id)
+        {
+            OffreQuery oq = new OffreQuery(_context);
+            return oq.GetByID(id).FirstOrDefault();
+        }
+
 
         public int AddOffre(Offre o)
         {
@@ -126,6 +132,12 @@ namespace BusinessLogicLayer
         {
             StatutQuery sq = new StatutQuery(_context);
             return sq.GetAll().ToList();
+        }
+
+        public Statut GetByIdStatut(int id)
+        {
+            StatutQuery sq = new StatutQuery(_context);
+            return sq.GetByID(id).FirstOrDefault();
         }
 
         public int AddStatut(Statut s)

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace ClientLourd.ViewModels
 {
@@ -20,6 +21,7 @@ namespace ClientLourd.ViewModels
         private string _responsable;
         //private List<Postulation> _postulation;
         private Statut _statut;
+        private RelayCommand _saveEntity;
 
         #endregion
 
@@ -91,6 +93,22 @@ namespace ClientLourd.ViewModels
         //    set { _postulation = value; }
         //}
 
+        #endregion
+
+        #region command
+        //public ICommand SaveEntity
+        //{
+        //    get
+        //    {
+        //        if (_saveEntity == null)
+        //            _saveEntity = new RelayCommand(off => SaveCommand((object)off));
+        //        return _saveEntity;
+        //    }
+        //}
+        //private void SaveCommand(object off)
+        //{
+        //    Manager.Instance.EditOffre(off);
+        //}
         #endregion
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBLL", "TestBLL\TestBLL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientLourd", "ClientLourd\ClientLourd.csproj", "{A3772D2B-CFC7-414A-BF04-5A414A0F2B7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NETMVC", "ASP.NETMVC\ASP.NETMVC.csproj", "{9FE1922E-F972-4338-ABA6-F4B2E5D1CF7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A3772D2B-CFC7-414A-BF04-5A414A0F2B7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3772D2B-CFC7-414A-BF04-5A414A0F2B7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3772D2B-CFC7-414A-BF04-5A414A0F2B7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE1922E-F972-4338-ABA6-F4B2E5D1CF7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE1922E-F972-4338-ABA6-F4B2E5D1CF7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE1922E-F972-4338-ABA6-F4B2E5D1CF7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE1922E-F972-4338-ABA6-F4B2E5D1CF7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

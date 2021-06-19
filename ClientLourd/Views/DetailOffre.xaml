@@ -31,7 +31,10 @@
             <TextBox Text="{Binding Salaire, StringFormat={}{0:##.00€}}"></TextBox>
             <Label>Responsable</Label>
             <TextBox Text="{Binding Responsable}"></TextBox>
-            <!--<Grid>
+            <Button Content="Save" Grid.Row="1" Height="23" HorizontalAlignment="Left" Margin="310,50,0,0" Name="btnSave" 
+            VerticalAlignment="Top" Width="141"
+            Command="{Binding Path=SaveEntity}" />
+                <!--<Grid>
                 <ListView Margin="5px" ItemsSource="{Binding Postulations}">
                     <ListView.View>
                         <GridView>

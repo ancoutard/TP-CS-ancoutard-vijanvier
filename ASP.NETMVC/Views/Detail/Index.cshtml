@@ -1,0 +1,43 @@
+﻿@model ASP.NETMVC.Models.OffreViewModel
+@{
+    ViewBag.Title = "Detail Page";
+}
+<div>
+    <h1>
+        @Model.Intitule
+    </h1>
+    <br />
+    <p>
+        <span>
+            Intitule : @Model.Intitule
+        </span>
+        <br />
+        <span>
+            Description : @Model.Description
+        </span>
+        <br />
+        <span>
+            Date : @Model.Date
+        </span>
+        <br />
+        <span>
+            Responsable : @Model.Responsable
+        </span>
+        <br />
+        <span>
+            Salaire : @Model.Salaire
+        </span>
+        <br />
+        <span>
+            Statut id : @Model.IdStatus
+        </span>
+        <br />
+        <span>
+            Statut libelle : @Model.Statut.Libelle
+        </span>
+        <br />
+    </p>
+    <div>
+        @Html.ActionLink("Retour à la liste", "Index", "Home")
+    </div>
+</div>
