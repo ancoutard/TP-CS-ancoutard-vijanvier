@@ -28,6 +28,11 @@ namespace BusinessLogicLayer.Commands
         /// <returns>Identifiant du Postulation ajouté</returns>
         public int Ajouter(Postulation p)
         {
+            Employe emp = Manager.Instance.GetByIdEmploye(p.IdEmploye);
+            if (emp.Postulations.Where(post => post.IdOffre == p.IdOffre).Count() > 0)
+            {
+                throw new Exception("Duplication de postulation");
+            }
             _contexte.Postulations.Add(p);
             return _contexte.SaveChanges();
         }

@@ -130,11 +130,13 @@
     <Compile Include="Controllers\DetailController.cs" />
     <Compile Include="Controllers\EditController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PostulationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ListeOffres.cs" />
     <Compile Include="Models\OffreViewModel.cs" />
+    <Compile Include="Models\PostulationViewModel.cs" />
     <Compile Include="Models\StatutViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -176,6 +178,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Detail\Index.cshtml" />
     <Content Include="Views\Edit\Index.cshtml" />
+    <Content Include="Views\Postulation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

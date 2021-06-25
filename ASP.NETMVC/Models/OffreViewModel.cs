@@ -15,5 +15,7 @@ namespace ASP.NETMVC.Models
         public int IdStatus { get; set; }
         public StatutViewModel Statut { get; set; }
         public String Responsable { get; set; }
+
+        public List<PostulationViewModel> Postulations { get; set; }
     }
 }

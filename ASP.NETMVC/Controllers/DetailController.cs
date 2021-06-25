@@ -22,6 +22,7 @@ namespace ASP.NETMVC.Controllers
             };
             OffreViewModel ovm = new OffreViewModel
             {
+                Id = off.Id,
                 Intitule = off.Intitule,
                 Description = off.Description,
                 Date = off.Date,

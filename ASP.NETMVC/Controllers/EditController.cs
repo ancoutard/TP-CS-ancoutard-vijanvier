@@ -29,6 +29,7 @@ namespace ASP.NETMVC.Controllers
                 IdStatus = off.IdStatus,
                 Responsable = off.Responsable,
                 Salaire = off.Salaire,
+                //Postulations = off.Postulations,
                 Statut = statutVM
             };
             return View(ovm);
@@ -38,6 +39,22 @@ namespace ASP.NETMVC.Controllers
         {
 
             Statut statut = Manager.Instance.GetByIdStatut(off.IdStatus);
+            List<Postulation> liste = new List<Postulation>();
+            off.Postulations.ForEach(p =>
+            {
+                Employe emp = Manager.Instance.GetByIdEmploye(p.IdEmploye);
+                Offre offreCh = Manager.Instance.GetByIdOffre(p.IdOffre);
+                liste.Add(new Postulation
+                {
+                    Date = p.Date,
+                    Employe = emp,
+                    IdEmploye = p.IdEmploye,
+                    IdOffre = p.IdOffre,
+                    Offre = offreCh,
+                    Statut = p.Statut
+                });
+            });
+            
             Offre offre = new Offre
             {
                 Id = off.Id,
@@ -47,6 +64,7 @@ namespace ASP.NETMVC.Controllers
                 IdStatus = off.IdStatus,
                 Responsable = off.Responsable,
                 Salaire = off.Salaire,
+                Postulations = liste,
                 Statut = statut
             };
             Manager.Instance.EditOffre(offre);

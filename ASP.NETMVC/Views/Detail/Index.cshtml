@@ -9,6 +9,10 @@
     <br />
     <p>
         <span>
+            Intitule : @Model.Id
+        </span>
+        <br />
+        <span>
             Intitule : @Model.Intitule
         </span>
         <br />
@@ -36,6 +40,9 @@
             Statut libelle : @Model.Statut.Libelle
         </span>
         <br />
+        <button>@Html.ActionLink("Postuler", "Postuler", "Postulation", new { idOff = Model.Id }, null)</button>
+
+        @*<button onclick=@Url.Action("Postuler", "Postulation", new {idOff = Model.Id })>Postuler</button>*@
     </p>
     <div>
         @Html.ActionLink("Retour à la liste", "Index", "Home")

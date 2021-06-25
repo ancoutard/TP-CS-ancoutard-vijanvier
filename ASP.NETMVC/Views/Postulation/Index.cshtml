@@ -1,0 +1,47 @@
+﻿@model List<ASP.NETMVC.Models.PostulationViewModel>
+@{
+    ViewBag.Title = "Postulation Page";
+}
+<div>
+    <h1>
+        Mes postulations
+    </h1>
+    <br />
+    <p>
+        @foreach (var item in Model)
+        {
+            <br />
+            <li>
+                <span>Detail de l'offre lié à la postulation : </span>
+                <br />
+                @Html.DisplayFor(post => item.Offre.Intitule)
+                <br />
+                @Html.DisplayFor(post => item.Offre.Description)
+                <br />
+                @Html.DisplayFor(post => item.Offre.Date)
+                <br />
+                @Html.DisplayFor(post => item.Offre.Responsable)
+                <br />
+                @Html.DisplayFor(post => item.Offre.Salaire)
+                <br />
+                @Html.DisplayFor(post => item.Offre.IdStatus)
+                <br />
+                @Html.DisplayFor(post => item.Offre.Statut.Libelle)
+                <br />
+                <br />
+                <br />
+                <span>Detail de la postulation : </span>
+                <br />
+                @Html.DisplayFor(post => item.Date)
+                <br />
+                @Html.DisplayFor(post => item.Statut)
+                <br />
+            </li>
+            <hr />
+            <br />
+        }
+    </p>
+    <div>
+        @Html.ActionLink("Retour à la liste", "Index", "Home")
+    </div>
+</div>
