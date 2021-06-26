@@ -40,9 +40,7 @@
             Statut libelle : @Model.Statut.Libelle
         </span>
         <br />
-        <button>@Html.ActionLink("Postuler", "Postuler", "Postulation", new { idOff = Model.Id }, null)</button>
-
-        @*<button onclick=@Url.Action("Postuler", "Postulation", new {idOff = Model.Id })>Postuler</button>*@
+        <input type="button" value="Postuler" onclick="location.href='@Url.Action("Postuler", "Postulation", new { idOff = Model.Id })'" />
     </p>
     <div>
         @Html.ActionLink("Retour à la liste", "Index", "Home")

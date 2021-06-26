@@ -13,13 +13,14 @@ namespace ClientLourd.ViewModels
     class DetailOffreViewModel
     {
         #region Variables
-
+        private int _id;
         private string _intitule;
-        //private DateTime _date;
+        private int _idStatus;
+        private DateTime _date;
         private float _salaire;
         private string _description;
         private string _responsable;
-        //private List<Postulation> _postulation;
+        private List<Postulation> _postulation;
         private Statut _statut;
         private RelayCommand _saveEntity;
 
@@ -29,12 +30,15 @@ namespace ClientLourd.ViewModels
 
         public DetailOffreViewModel(Offre e)
         {
+            _id = e.Id;
             _intitule = e.Intitule;
             _responsable = e.Responsable;
             _salaire = e.Salaire;
             _description = e.Description;
             _statut = e.Statut;
-            //_postulation = (List<Postulation>)e.Postulations;
+            _date = e.Date;
+            _idStatus = e.IdStatus;
+            _postulation = (List<Postulation>)e.Postulations;
         }
 
         #endregion
@@ -96,19 +100,19 @@ namespace ClientLourd.ViewModels
         #endregion
 
         #region command
-        //public ICommand SaveEntity
-        //{
-        //    get
-        //    {
-        //        if (_saveEntity == null)
-        //            _saveEntity = new RelayCommand(off => SaveCommand((object)off));
-        //        return _saveEntity;
-        //    }
-        //}
-        //private void SaveCommand(object off)
-        //{
-        //    Manager.Instance.EditOffre(off);
-        //}
+        public ICommand SaveEntity
+        {
+            get
+            {
+                if (_saveEntity == null)
+                    _saveEntity = new RelayCommand(() => this.SaveCommand());
+                return _saveEntity;
+            }
+        }
+        private void SaveCommand()
+        {
+            Manager.Instance.EditOffre(new Offre { Id = _id, Description = _description, Statut = _statut, Intitule = _intitule, Salaire = _salaire, Responsable = _responsable, Date = _date, IdStatus = _idStatus, Postulations = _postulation });
+        }
         #endregion
     }
 }

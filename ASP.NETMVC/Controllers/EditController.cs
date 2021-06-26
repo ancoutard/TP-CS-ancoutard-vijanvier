@@ -20,6 +20,18 @@ namespace ASP.NETMVC.Controllers
                 Id = off.Statut.Id,
                 Libelle = off.Statut.Libelle
             };
+            List<PostulationViewModel> liste = new List<PostulationViewModel>();
+            foreach(Postulation p in off.Postulations)
+            {
+                Employe emp = Manager.Instance.GetByIdEmploye(p.IdEmploye);
+                liste.Add(new PostulationViewModel
+                {
+                    Date = p.Date,
+                    IdEmploye = p.IdEmploye,
+                    IdOffre = p.IdOffre,
+                    Statut = p.Statut
+                });
+            }
             OffreViewModel ovm = new OffreViewModel
             {
                 Id = off.Id,
@@ -29,7 +41,7 @@ namespace ASP.NETMVC.Controllers
                 IdStatus = off.IdStatus,
                 Responsable = off.Responsable,
                 Salaire = off.Salaire,
-                //Postulations = off.Postulations,
+                Postulations = liste,
                 Statut = statutVM
             };
             return View(ovm);
@@ -43,14 +55,12 @@ namespace ASP.NETMVC.Controllers
             off.Postulations.ForEach(p =>
             {
                 Employe emp = Manager.Instance.GetByIdEmploye(p.IdEmploye);
-                Offre offreCh = Manager.Instance.GetByIdOffre(p.IdOffre);
                 liste.Add(new Postulation
                 {
                     Date = p.Date,
                     Employe = emp,
                     IdEmploye = p.IdEmploye,
                     IdOffre = p.IdOffre,
-                    Offre = offreCh,
                     Statut = p.Statut
                 });
             });

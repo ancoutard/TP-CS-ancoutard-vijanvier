@@ -34,7 +34,14 @@ namespace ConsoleApp1
                 Offre offre = manager.GetAllOffre().First();
                 listeEmp.ForEach(e =>
                 {
-                    manager.AddPostulation(new Postulation { Statut = "TMTC", Employe = e, Offre = offre, Date = DateTime.Now });
+                    try
+                    {
+                        manager.AddPostulation(new Postulation { Statut = "TMTC", Employe = e, Offre = offre, Date = DateTime.Now, IdEmploye = e.Id, IdOffre = offre.Id });
+                    }
+                    catch(Exception exe)
+                    {
+                        Console.WriteLine(exe.Message);
+                    }
                 });
             }
             catch (Exception e)
